@@ -1,36 +1,45 @@
-// let firstName = "Ishaq"; // Variable // var // let
+// let data = "Hello ";
+// let data2 = "Students";
 
-    // Variable Rules
-// 1. Legal or Illegal names
 
-    // Legal
-// let lastName // CamelCase
-// lastname
-// Allowed Special Characters
-// _ $
-// let $nameWith$Dollar = "";
-// let _nameWith_Dollar = "";
-// Var cannot be start with a number
-// let myName
+// let data3 = data + data2; // Strings Concatenation
+// console.log(data3);
 
-    // Illegal
-// let last name // spaces
-// let my#name
-// reserved words
+    // Examples
+// num + num = addition
+// num + string = Concatenation
+// string + num = Concatenation
+// string + string = Concatenation
 
-//alert(firstName);
+// let data = "5";
+// let data2 = 5;
 
-    // Data Types
+// let data3 = data + data2; // addition
+// console.log(data3);
 
-        // 1. String
-let firstName = 'Ishaq'; 
-// examples = "Farrukh", "An Apple", "#", "8" "email@test.com"
-// Any letter, word or sentence is String in JavaScript
+// let data = "Hello Students";
+// let data2 = data.includes("Students");
+// console.log(data2);
 
-        // 2. Number
-let myLuckyNumber = 8;
-// example = 4, 37, 0, -34, 4.765
+// Math Operators = + - * / %
 
-        // 3. Boolean
-let isTodayMonday = true;
-// examaple = true & false
+let data = 10;
+let data2 = 3;
+console.log(data % data2);
+
+// let userFavNum = prompt("What is your favourite number?");
+// console.log(userFavNum);
+
+// let userName = prompt("What is your Name?");
+// document.write("Welcome to my website " + userName);
+
+// let randomNumber = Math.random();
+// // randomNumber = randomNumber * 10; 
+// randomNumber *= 10; // Short Hand
+// let roundedNumber = Math.round(randomNumber);
+// console.log(roundedNumber);
+
+// BODMAS = Brackets Of, Divide, Multiply, Add, Subtract
+// let num = 5 ** 3;
+
+// console.log(num);
