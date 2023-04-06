@@ -23,9 +23,9 @@
 
 // Math Operators = + - * / %
 
-let data = 10;
-let data2 = 3;
-console.log(data % data2);
+// let data = 10;
+// let data2 = 3;
+// console.log(data % data2);
 
 // let userFavNum = prompt("What is your favourite number?");
 // console.log(userFavNum);
@@ -34,12 +34,11 @@ console.log(data % data2);
 // document.write("Welcome to my website " + userName);
 
 // let randomNumber = Math.random();
-// // randomNumber = randomNumber * 10; 
+// //randomNumber = randomNumber * 10; 
 // randomNumber *= 10; // Short Hand
 // let roundedNumber = Math.round(randomNumber);
 // console.log(roundedNumber);
 
-// BODMAS = Brackets Of, Divide, Multiply, Add, Subtract
+//  BODMAS = Brackets Of, Divide, Multiply, Add, Subtract
 // let num = 5 ** 3;
-
 // console.log(num);
