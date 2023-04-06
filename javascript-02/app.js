@@ -40,5 +40,5 @@
 // console.log(roundedNumber);
 
 //  BODMAS = Brackets Of, Divide, Multiply, Add, Subtract
-// let num = 5 ** 3;
-// console.log(num);
+let num = 5 ** 3;
+console.log(num);
