@@ -1,36 +1,43 @@
-// let firstName = "Ishaq"; // Variable // var // let
+// Q-1Write a JavaScript program that accepts two numbers in two prompts and displays the larger one in the console.
 
-    // Variable Rules
-// 1. Legal or Illegal names
+/*let number1 = prompt("Enter the first number:");
+let number2 = prompt("Enter the second number:");
 
-    // Legal
-// let lastName // CamelCase
-// lastname
-// Allowed Special Characters
-// _ $
-// let $nameWith$Dollar = "";
-// let _nameWith_Dollar = "";
-// Var cannot be start with a number
-// let myName
+number1 = parseFloat(number1);
+number2 = parseFloat(number2);
 
-    // Illegal
-// let last name // spaces
-// let my#name
-// reserved words
+if (number1 > number2) {
+    console.log(number1 + " is larger than " + number2);
+  } else if (number2 > number1) {
+    console.log(number2 + " is larger than " + number1);
+  } else {
+    console.log("Both numbers are equal");
+  }
+  */
 
-//alert(firstName);
 
-    // Data Types
+  //Q2 Write a JavaScript conditional statement to find the sign of a number. Display an alert box with the specified sign.
 
-        // 1. String
-let firstName = 'Ishaq'; 
-// examples = "Farrukh", "An Apple", "#", "8" "email@test.com"
-// Any letter, word or sentence is String in JavaScript
+ /*
+let number = prompt("Enter a number:");
+number = parseFloat(number);
 
-        // 2. Number
-let myLuckyNumber = 8;
-// example = 4, 37, 0, -34, 4.765
+if (number > 0) {
+    alert("The number is positive");
+  } else if (number < 0) {
+    alert("The number is negative");
+  } else {
+    alert("The number is zero");
+  }
+   */
 
-        // 3. Boolean
-let isTodayMonday = true;
-// examaple = true & false
+  /*
+  Q-3 Write a JavaScript conditional statement to find the sign of a number. 
+  Display an alert box with the specified sign.
+Sample: 3
+Output : The sign is +
+Sample: -5
+Output : The sign is -
+*/
+
+let number = prompt("Enter a number:");
