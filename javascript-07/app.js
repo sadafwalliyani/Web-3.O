@@ -1,50 +1,50 @@
-//input
-//add with number
-//let userFavNum = prompt("Enter you favourite number");
-//console.log(+userFavNum + 5);
+let myPara = document.getElementById("my-para");
 
-    // Comparison Operators
-    // ==, ===
-//console.log(5 === "5");
-    // !=, !==
-//console.log(5 !== 6);
-    // <, >, <=, >=
-// let user1Age = 7;
-// let user2Age = 25;
-// console.log(user2Age >= 18);
-// console.log(user1Age>=18);
+myPara.innerText = "Hello";
 
-let userAge = +prompt("Enter your age");
+let myPara = document.querySelector("p");
+myPara.innerHTML = "<b>Pakistan Zindabad</b>"
+console.log(myPara);
 
-// if (userAge >= 18) {
-//     console.log("You can apply for NIC");
-// } else {
-//     console.log("You are not eligible")
-// }
+// let myPara = document.querySelector("#my-para");
+// myPara.innerHTML = "<b>Pakistan Zindabad</b>";
+// myPara.style.backgroundColor = "#000";
+// myPara.style.color = "#fff";
 
-// let userFavNum = +prompt("Enter a number");
-// let computerNum = Math.round(Math.random() * 10);
+// setInterval(function() {
+//   if(myPara.style.display === "none") {
+//     myPara.style.display = "block";
+//   } else {
+//     myPara.style.display = "none";
+//   }
+// }, 500);
 
-// if (userFavNum === computerNum) {
-//     console.log("You Won!");
-// } else {
-//     console.log("You Lose! " + computerNum);
-// }
+// let yourPara = document.querySelector("#your-para");
+// yourPara.innerHTML = "<b>Pakistan Zindabad</b>";
+// yourPara.style.backgroundColor = "#000";
+// yourPara.style.color = "#fff";
+// yourPara.style.width = "100%";
 
-// let userInput = prompt("Even or Odd");
-// let computerNum = Math.round(Math.random() * 10);
-// let isEven = computerNum % 2 === 0;
-// if (isEven && userInput === "even") {
-//     console.log("You Won!" + computerNum);
-// } else if (!isEven && userInput === "odd") {
-//     console.log("You Won!" + computerNum);
-// } else {
-//     console.log("You Lose! " + computerNum);
-// }
-// Initialisation
-// Condition
-// Increment
-// let table = 18;
-// for (let i = 1; i <= 10; i++) {
-//     console.log(table+"  "+ i + " = " + table*i);
-// }
+// setInterval(function () {
+//   let width = yourPara.style.width;
+//   if (width === "100%") {
+//     yourPara.style.width = "10%";
+//   } else { // "30%"
+//     width = +width.replace("%", ""); // "30%" => "30" => 30
+//     yourPara.style.width = width + 10 + "%"; // 30 + 10 = 40 + "%" = "40%""
+//   }
+// }, 500);
+
+// const myPara = document.getElementById("my-para");
+// myPara.innerHTML = "<b>Pakistan Zindabad</b>";
+// setInterval(function () {
+//   let color1 = Math.floor(Math.random()*16777215).toString(16);
+//   let color2 = Math.floor(Math.random()*16777215).toString(16);
+//   myPara.style.backgroundColor = "#" + color1;
+//   myPara.style.color = "#" + color2;
+// }, 500);
+
+// let dataThatCanChange = "asdf";
+// dataThatCanChange = "ghjkl";
+// const dataThatCanNotBeChanged = "asdfghjk";
+// dataThatCanNotBeChanged = "sadasd";

@@ -65,11 +65,13 @@ the new background color.*/
 function changeBackgroundColor(element, color) {
   element.style.backgroundColor = color;
 }
-const myElement = document.querySelector('#my-element'); // find the element by ID
-changeBackgroundColor(myElement, 'blue'); // change the background color to blue
+const myElement = document.querySelector('p'); // find the element by ID
+changeBackgroundColor(myElement, 'green'); // change the background color to blue
+myElement.style.color="white"; 
 
-
-
-
-
+/*
+Write a function that saves an object to localStorage. The function should
+take two arguments: the first argument is a string representing the key to
+use for storing the object, and the second argument is the object to store.
+ */
 
