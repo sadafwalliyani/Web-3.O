@@ -75,3 +75,53 @@ take two arguments: the first argument is a string representing the key to
 use for storing the object, and the second argument is the object to store.
  */
 
+function saveToLocalStorage(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
+}
+let myObject = { name: "Sadaf", age: 25 };
+saveToLocalStorage("myKey", myObject);
+
+let retrieved_Object = JSON.parse(localStorage.getItem("myKey"));
+console.log(retrieved_Object);
+// Output: { name: "sadaf", age: 25 }
+
+/*
+Write a function that retrieves an object from localStorage. The function
+should take one argument, which is a string representing the key used to
+store the object. The function should return the object
+*/
+function getFromLocalStorage(key) {
+  let value = localStorage.getItem(key);
+  return JSON.parse(value);
+}
+let retrievedObject = getFromLocalStorage("myKey");
+console.log(retrievedObject);
+// Output: { name: "sadaf", age: 25 }
+
+
+/*Write a function that takes an object and saves each property to
+localStorage using the property name as the key and the property value as
+the value. The function should also retrieve the object from localStorage
+and return it as a new object. */
+
+function saveObjToLocalStorage(obj) {
+  // Save each property of the object to localStorage
+  for (let prop in obj) {
+    if (obj.hasOwnProperty(prop)) {
+      localStorage.setItem(prop, JSON.stringify(obj[prop]));
+    }
+  }
+
+  // Retrieve the object from localStorage and return it as a new object
+  let newObj = {};
+  for (let i = 0; i < localStorage.length; i++) {
+    let key = localStorage.key(i);
+    newObj[key] = JSON.parse(localStorage.getItem(key));
+  }
+  return newObj;
+}
+
+let myObj = { name: "Maher", age: 30 };
+let savedObject = saveObjToLocalStorage(myObj);
+console.log(savedObject);
+// Output: { name: "Maher", age: 30 }
