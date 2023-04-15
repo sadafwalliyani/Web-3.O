@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movie Recommendation App</title>
+  </head>
+  <body>
+    <h1>Movie Recommendation App</h1>
+
+    <form>
+      <label for="genre">Genre:</label>
+      <select id="genre">
+        <option value="">-- Select Genre --</option>
+        <option value="Action">Action</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Drama">Drama</option>
+        <option value="Horror">Horror</option>
+        <option value="Sci-Fi">Sci-Fi</option>
+      </select>
+
+      <label for="rating">Rating:</label>
+      <input type="number" id="rating" min="0" max="10">
+
+      <label for="release-year">Release Year:</label>
+      <input type="number" id="release-year" min="1900" max="2023">
+
+      <button type="button" id="recommend-btn">Recommend Movies</button>
+    </form>
+
+    <div id="recommendations"></div>
+
+    <script>
+      // Load movie data from JSON file
+      const movies = [
+        { title: "The Matrix", genre: "Sci-Fi", rating: 8.7, releaseYear: 1999 },
+        { title: "The Dark Knight", genre: "Action", rating: 9.0, releaseYear: 2008 },
+        { title: "Pulp Fiction", genre: "Drama", rating: 8.9, releaseYear: 1994 },
+        { title: "Get Out", genre: "Horror", rating: 7.7, releaseYear: 2017 },
+        { title: "Bridesmaids", genre: "Comedy", rating: 6.8, releaseYear: 2011 },
+        { title: "Interstellar", genre: "Sci-Fi", rating: 8.6, releaseYear: 2014 },
+        { title: "Inception", genre: "Sci-Fi", rating: 8.8, releaseYear: 2010 },
+        { title: "The Shawshank Redemption", genre: "Drama", rating: 9.3, releaseYear: 1994 },
+      ];
+
+      // Get user input and filter movie data based on preferences
+      function getRecommendations() {
+        const genre = document.getElementById("genre").value;
+        const rating = document.getElementById("rating").value;
+        const releaseYear = document.getElementById("release-year").value;
+
+        const filteredMovies = movies.filter((movie) => {
+          return (
+            (genre === "" || movie.genre === genre) &&
+            (rating === "" || movie.rating >= rating) &&
+            (releaseYear === "" || movie.releaseYear >= releaseYear)
+          );
+        });
+
+        displayRecommendations(filteredMovies);
+      }
+
+      // Display movie recommendations on the user interface
+      function displayRecommendations(movies) {
+        const recommendationsElement = document.getElementById("recommendations");
+
+        // Clear previous recommendations
+        recommendationsElement.innerHTML = "";
+
+        // Display new recommendations
+        if (movies.length > 0) {
+          const ulElement = document.createElement("ul");
+          movies.forEach((movie) => {
+            const liElement = document.createElement("li");
+            liElement.textContent = `${movie.title} (${movie.releaseYear}) - ${movie.genre} - ${movie.rating}/10`;
+            ulElement.appendChild(liElement);
+          });
+          recommendationsElement.appendChild(ulElement);
+        } else {
+          const pElement = document.createElement("p");
+        }}
