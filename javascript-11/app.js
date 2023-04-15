@@ -1,36 +1,56 @@
-// let firstName = "Ishaq"; // Variable // var // let
+// fetch('https://jsonplaceholder.typicode.com/todos/1')
+//       .then(function (response) {
+//         return response.json();
+//       })
+//       .then(function (data) {
+//         console.log(data);
+//       })
 
-    // Variable Rules
-// 1. Legal or Illegal names
+// fetch('https://jsonplaceholder.typicode.com/posts')
+//       .then(function (response) {
+//         return response.json();
+//       })
+//       .then(function (data) {
+//         console.log(data);
+//       })
 
-    // Legal
-// let lastName // CamelCase
-// lastname
-// Allowed Special Characters
-// _ $
-// let $nameWith$Dollar = "";
-// let _nameWith_Dollar = "";
-// Var cannot be start with a number
-// let myName
+// const imagesContainer = document.getElementById("images");
+// fetch('https://jsonplaceholder.typicode.com/photos')
+//       .then(function (response) {
+//         return response.json();
+//       })
+//       .then(function (data) {
+//         data.forEach(function (image) {
+//             const url = image.url;
+//             const imageElem = document.createElement("img");
+//             imageElem.src = url;
+//             imagesContainer.appendChild(imageElem);
+//         });
+//       })
 
-    // Illegal
-// let last name // spaces
-// let my#name
-// reserved words
+// fetch('https://dummyjson.com/products/add', {
+//   method: 'POST',
+//   headers: { 'Content-Type': 'application/json' },
+//   body: JSON.stringify({
+//     title: 'BMW Pencil',
+//     description: 'This is an amazing pencil.'
+//   })
+// })
+// .then(res => res.json())
+// .then(console.log);
 
-//alert(firstName);
+// fetch('https://dummyjson.com/products/1', {
+//   method: 'PUT', /* or PATCH */
+//   headers: { 'Content-Type': 'application/json' },
+//   body: JSON.stringify({
+//     title: 'iPhone Galaxy +1'
+//   })
+// })
+// .then(res => res.json())
+// .then(console.log);
 
-    // Data Types
-
-        // 1. String
-let firstName = 'Ishaq'; 
-// examples = "Farrukh", "An Apple", "#", "8" "email@test.com"
-// Any letter, word or sentence is String in JavaScript
-
-        // 2. Number
-let myLuckyNumber = 8;
-// example = 4, 37, 0, -34, 4.765
-
-        // 3. Boolean
-let isTodayMonday = true;
-// examaple = true & false
+fetch('https://dummyjson.com/products/1', {
+  method: 'DELETE',
+})
+.then(res => res.json())
+.then(console.log);
