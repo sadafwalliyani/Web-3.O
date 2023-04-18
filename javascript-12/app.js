@@ -105,20 +105,21 @@
 // products.forEach(p => console.log(p.name));
 
 class Product {
-    constructor (title, price) {
-      this.title = title;
-      this.price = price;
-    }
+  constructor (title, price) {
+    this.title = title;
+    this.price = price;
   }
-  
-  const product1 = new Product("LED TV", 12000);
-  const product2 = new Product("Samsung Galaxy", 140000);
-  const products = [product1, product2];
-  
-  products.forEach(p => console.log(p.title));
-  
-  
-  
-  
-  
-  
+}
+
+const product1 = new Product("LED TV", 12000);
+const product2 = new Product("Samsung Galaxy", 140000);
+const products = [product1, product2];
+
+products.forEach(p => console.log(p.title));
+
+
+
+
+
+
+

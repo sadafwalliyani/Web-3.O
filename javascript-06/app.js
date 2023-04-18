@@ -1,50 +1,70 @@
-//input
-//add with number
-//let userFavNum = prompt("Enter you favourite number");
-//console.log(+userFavNum + 5);
+// Objects
 
-    // Comparison Operators
-    // ==, ===
-//console.log(5 === "5");
-    // !=, !==
-//console.log(5 !== 6);
-    // <, >, <=, >=
-// let user1Age = 7;
-// let user2Age = 25;
-// console.log(user2Age >= 18);
-// console.log(user1Age>=18);
+// let person = {
+//   name: "Nadir",
+//   cnic: 1234567890,
+//   eyesColor: "black",
+//   canSpeakEnglish: false,
+//   speak: function(sentence) {
+//     console.log(sentence + this.name);
+//   }
+// };
 
-let userAge = +prompt("Enter your age");
+// let person2 = { // person2 = Object
+//   name: "Ameen", // name: "Ameen" = Property
+//   cnic: 1234567890, // cnic = key
+//   eyesColor: "black", // "black" = value
+//   canSpeakEnglish: false,
+//   speak: function(sentence) {
+//     console.log(sentence + this.name);
+//   }
+// };
 
-// if (userAge >= 18) {
-//     console.log("You can apply for NIC");
-// } else {
-//     console.log("You are not eligible")
+// let animal = {
+//   name: "Lion",
+//   eatsMeat: true,
+//   eatsGrass: false
+// };
+// let animal2 = {
+//   name: "Goat",
+//   eatsMeat: false,
+//   eatsGrass: true
 // }
 
-// let userFavNum = +prompt("Enter a number");
-// let computerNum = Math.round(Math.random() * 10);
+// person2.speak("Hello, I'm ");
+// console.log(person.name);
 
-// if (userFavNum === computerNum) {
-//     console.log("You Won!");
-// } else {
-//     console.log("You Lose! " + computerNum);
-// }
+// let student1 = {
+//   name: "Hamza",
+//   rollNo: 420,
+//   teacher: "Nadir",
+//   className: "JavaScript"
+// };
 
-// let userInput = prompt("Even or Odd");
-// let computerNum = Math.round(Math.random() * 10);
-// let isEven = computerNum % 2 === 0;
-// if (isEven && userInput === "even") {
-//     console.log("You Won!" + computerNum);
-// } else if (!isEven && userInput === "odd") {
-//     console.log("You Won!" + computerNum);
-// } else {
-//     console.log("You Lose! " + computerNum);
-// }
-// Initialisation
-// Condition
-// Increment
-// let table = 18;
-// for (let i = 1; i <= 10; i++) {
-//     console.log(table+"  "+ i + " = " + table*i);
-// }
+// let student2 = {
+//   name: "Farrukh",
+//   rollNo: 421,
+//   teacher: "Ameen",
+//   className: "CSS"
+// };
+
+let prevStudents = localStorage.getItem("students"); // get from LocalStorage
+let students = prevStudents ? JSON.parse(prevStudents) : [];
+function provideStudent() {
+  let std = {
+    name: prompt("Enter Name"),
+    rollNo: +prompt("Enter Roll no"),
+    teacher: prompt("Enter Teachers Name"),
+    className: prompt("Enter Your Class"),
+  };
+  students.push(std);
+  console.log(students);
+  let stringify = JSON.stringify(students); // Convert it to String
+  localStorage.setItem("students", stringify); // Save it to LocalStorage
+}
+
+// localStorage.setItem("name", "Ishaq");
+
+
+
+

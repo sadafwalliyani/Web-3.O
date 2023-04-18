@@ -1,11 +1,9 @@
 // let data = "Hello ";
 // let data2 = "Students";
 
-
 // let data3 = data + data2; // Strings Concatenation
 // console.log(data3);
 
-    // Examples
 // num + num = addition
 // num + string = Concatenation
 // string + num = Concatenation
@@ -34,11 +32,12 @@
 // document.write("Welcome to my website " + userName);
 
 // let randomNumber = Math.random();
-// //randomNumber = randomNumber * 10; 
+// // randomNumber = randomNumber * 10; 
 // randomNumber *= 10; // Short Hand
 // let roundedNumber = Math.round(randomNumber);
 // console.log(roundedNumber);
 
-//  BODMAS = Brackets Of, Divide, Multiply, Add, Subtract
+// BODMAS = Brackets Of, Divide, Multiply, Add, Subtract
 let num = 5 ** 3;
+
 console.log(num);

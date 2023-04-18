@@ -1,10 +1,10 @@
-let myPara = document.getElementById("my-para");
+// let myPara = document.getElementById("my-para");
 
-myPara.innerText = "Hello";
+// myPara.innerText = "Hello";
 
-let myPara = document.querySelector("p");
-myPara.innerHTML = "<b>Pakistan Zindabad</b>"
-console.log(myPara);
+// let myPara = document.querySelector("p");
+// myPara.innerHTML = "<b>Pakistan Zindabad</b>"
+// console.log(myPara);
 
 // let myPara = document.querySelector("#my-para");
 // myPara.innerHTML = "<b>Pakistan Zindabad</b>";
@@ -44,7 +44,7 @@ console.log(myPara);
 //   myPara.style.color = "#" + color2;
 // }, 500);
 
-// let dataThatCanChange = "asdf";
-// dataThatCanChange = "ghjkl";
-// const dataThatCanNotBeChanged = "asdfghjk";
-// dataThatCanNotBeChanged = "sadasd";
+let dataThatCanChange = "asdf";
+dataThatCanChange = "ghjkl";
+const dataThatCanNotBeChanged = "asdfghjk";
+dataThatCanNotBeChanged = "sadasd";

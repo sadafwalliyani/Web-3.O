@@ -1,50 +1,78 @@
-//input
-//add with number
-//let userFavNum = prompt("Enter you favourite number");
-//console.log(+userFavNum + 5);
+// Functions
+// alert, parseInt = built-in function
+// greet = custom function
+//  function greet (studentsName) { // Parameter
+//     console.log("Hello " + studentsName);
+//  }
 
-    // Comparison Operators
-    // ==, ===
-//console.log(5 === "5");
-    // !=, !==
-//console.log(5 !== 6);
-    // <, >, <=, >=
-// let user1Age = 7;
-// let user2Age = 25;
-// console.log(user2Age >= 18);
-// console.log(user1Age>=18);
+//  greet("Nadir"); // Argument
+//  greet("Ikhlas"); // Argument
+//  greet("Ameen"); // Argument
 
-let userAge = +prompt("Enter your age");
-
-// if (userAge >= 18) {
-//     console.log("You can apply for NIC");
-// } else {
-//     console.log("You are not eligible")
+// function employee(fileNo) {
+//   return "Working on file no: " + fileNo;
 // }
 
-// let userFavNum = +prompt("Enter a number");
-// let computerNum = Math.round(Math.random() * 10);
+// let data = employee(7);
+// console.log(data);
 
-// if (userFavNum === computerNum) {
-//     console.log("You Won!");
-// } else {
-//     console.log("You Lose! " + computerNum);
+// function add (num1, num2) {
+//     return num1 + num2;
 // }
 
-// let userInput = prompt("Even or Odd");
-// let computerNum = Math.round(Math.random() * 10);
-// let isEven = computerNum % 2 === 0;
-// if (isEven && userInput === "even") {
-//     console.log("You Won!" + computerNum);
-// } else if (!isEven && userInput === "odd") {
-//     console.log("You Won!" + computerNum);
-// } else {
-//     console.log("You Lose! " + computerNum);
+// let result = add(5, 7);
+// console.log(result);
+// document.write(result);
+
+// Recursion
+
+// function writeData(data, times) {
+//     document.write(data);
+//     if (times > 0) {
+//         writeData(data, times - 1);
+//     }
 // }
-// Initialisation
-// Condition
-// Increment
-// let table = 18;
-// for (let i = 1; i <= 10; i++) {
-//     console.log(table+"  "+ i + " = " + table*i);
+
+// writeData("Hello", 5);
+
+// function factorial (num) {
+//     if (num > 1) {
+//         return num * factorial(num - 1);
+//     }
+//     return 1;
 // }
+
+// console.log(factorial(4));
+// 5 * 4 * 3 * 2 * 1
+
+// Closures => Scopes
+// Global Scope => whole file
+// local scope => inside function
+
+// let abc = 7; // Global Scope
+// function print (def) {
+//     //  def = local scope
+//     return function (ghi) { // anonymous function
+//         console.log(def + ghi)
+//     }
+// }
+
+// let innerFunction = print(7);
+// let innerFunction2 = print(8);
+// innerFunction(7)
+// innerFunction2(5)
+
+
+// function saveUrl (url) {
+//     return function () {
+//         fetch(url)
+//             .then(response => response.json())
+//             .then(json => console.log(json))
+//     }
+// }
+// // SAVE URL 
+// let makesRequest = saveUrl("https://jsonplaceholder.typicode.com/todos");
+
+// // Request attempt
+// makesRequest();
+// makesRequest();

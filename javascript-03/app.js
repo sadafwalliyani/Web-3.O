@@ -1,20 +1,18 @@
-//input
-//add with number
-//let userFavNum = prompt("Enter you favourite number");
-//console.log(+userFavNum + 5);
+// let userFavNum = prompt("Enter you favourite number");
 
-    // Comparison Operators
-    // ==, ===
-//console.log(5 === "5");
-    // !=, !==
-//console.log(5 !== 6);
-    // <, >, <=, >=
+// console.log(+userFavNum + 5);
+
+// Comparison Operators
+// ==, ===
+// console.log(5 === "5");
+// !=, !==
+// console.log(5 !== 6);
+// <, >, <=, >=
 // let user1Age = 7;
 // let user2Age = 25;
 // console.log(user2Age >= 18);
-// console.log(user1Age>=18);
 
-let userAge = +prompt("Enter your age");
+// let userAge = +prompt("Enter your age");
 
 // if (userAge >= 18) {
 //     console.log("You can apply for NIC");
@@ -44,7 +42,7 @@ let userAge = +prompt("Enter your age");
 // Initialisation
 // Condition
 // Increment
-// let table = 18;
-// for (let i = 1; i <= 10; i++) {
-//     console.log(table+"  "+ i + " = " + table*i);
-// }
+let table = 18;
+for (let i = 1; i <= 10; i++) {
+    console.log(table+"  "+ i + " = " + table*i);
+}

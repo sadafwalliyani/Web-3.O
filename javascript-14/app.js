@@ -1,36 +1,87 @@
-// let firstName = "Ishaq"; // Variable // var // let
+const quizSelector = document.getElementById("quiz-selector");
+const quizContainer = document.getElementById("quiz-container");
+const resultsContainer = document.getElementById("results-container");
+const questionContainer = document.getElementById("question-container");
+const answerButtonsContainer = document.getElementById(
+  "answer-buttons-container"
+);
 
-    // Variable Rules
-// 1. Legal or Illegal names
+class Quiz {
+  constructor(questions) {
+    this.questions = Quiz.shuffleArray(questions);
+    this.currentQuestionIndex = 0;
+    this.score = 0;
+    this.displayQuestion();
+  }
 
-    // Legal
-// let lastName // CamelCase
-// lastname
-// Allowed Special Characters
-// _ $
-// let $nameWith$Dollar = "";
-// let _nameWith_Dollar = "";
-// Var cannot be start with a number
-// let myName
+  displayQuestion() {
+    answerButtonsContainer.innerHTML = "";
+    const currentQuestion = this.questions[this.currentQuestionIndex];
+    questionContainer.textContent = currentQuestion.question;
+    const answers = Quiz.shuffleArray(currentQuestion.answers);
+    answers.forEach((answer) => {
+      const button = document.createElement("button");
+      button.classList = ["answer-button"];
+      button.textContent = answer;
+      button.addEventListener("click", this.checkAnswer.bind(this));
+      answerButtonsContainer.appendChild(button);
+    });
+  }
 
-    // Illegal
-// let last name // spaces
-// let my#name
-// reserved words
+  checkAnswer(event) {
+    const selectedAnswer = event.target.textContent;
+    const currentQuestion = this.questions[this.currentQuestionIndex];
+    if (selectedAnswer === currentQuestion.correctAnswer) {
+      this.score++;
+    }
 
-//alert(firstName);
+    this.currentQuestionIndex++;
 
-    // Data Types
+    if (this.currentQuestionIndex < this.questions.length) {
+        this.displayQuestion();
+      } else {
+        this.showResult();
+      }
+  }
 
-        // 1. String
-let firstName = 'Ishaq'; 
-// examples = "Farrukh", "An Apple", "#", "8" "email@test.com"
-// Any letter, word or sentence is String in JavaScript
+  showResult() {
+    quizContainer.style.display = "none";
+    resultsContainer.style.display = "block";
+    resultsContainer.innerHTML = `
+          <h2>Quiz Result</h2>
+          <p>You scored ${this.score} out of ${this.questions.length} questions</p>
+          <button id="reload-quiz">Reload All quiz</button>
+      `;
 
-        // 2. Number
-let myLuckyNumber = 8;
-// example = 4, 37, 0, -34, 4.765
+      document.getElementById("reload-quiz").addEventListener("click", () => {
+        quizContainer.style.display = "none";
+        resultsContainer.style.display = "none";
+        quizSelector.style.display = "flex";
+      });
+  }
 
-        // 3. Boolean
-let isTodayMonday = true;
-// examaple = true & false
+  static shuffleArray(arr) {
+    return [...arr].sort(() => Math.random() - 0.5);
+  }
+}
+
+const loadQuiz = (questions) => {
+  const quiz = new Quiz(questions);
+  quizContainer.style.display = "block";
+  quizSelector.style.display = "none";
+};
+
+const loadAllQuiz = async () => {
+  const response = await fetch("./quizzes.json");
+  const quizzes = await response.json();
+
+  quizzes.forEach((quiz, index) => {
+    const quizCard = document.createElement("div");
+    quizCard.classList = ["quiz-card"];
+    quizCard.innerText = "Quiz " + (index + 1);
+    quizCard.addEventListener("click", () => loadQuiz(quiz));
+    quizSelector.appendChild(quizCard);
+  });
+};
+
+loadAllQuiz();

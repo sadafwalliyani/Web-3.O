@@ -1,36 +1,95 @@
-// let firstName = "Ishaq"; // Variable // var // let
+// class Product {
+//   constructor(title, amount, description) {
+//     this.title = title;
+//     this.price = amount;
+//     this.details = description;
+//   }
+// }
 
-    // Variable Rules
-// 1. Legal or Illegal names
+// const product1 = new Product("LED TV", 12000, "4K Ultra HD Display");
+// const product2 = new Product("Android Phone", 84000, "Android 12 OS");
+// const product3 = {
+//   title: "Android Phone",
+//   price: 84000,
+//   details: "Android 12 OS",
+// };
+// console.log(product1, product2);
+// console.log(product3 instanceof Product);
 
-    // Legal
-// let lastName // CamelCase
-// lastname
-// Allowed Special Characters
-// _ $
-// let $nameWith$Dollar = "";
-// let _nameWith_Dollar = "";
-// Var cannot be start with a number
-// let myName
+// class Shape {
+//   constructor (id, x, y) {
+//       this.id = id;
+//   }
 
-    // Illegal
-// let last name // spaces
-// let my#name
-// reserved words
+//   move (x, y) {
+//       this.x = x
+//       this.y = y
+//   }
+// }
 
-//alert(firstName);
+// const square = new Shape("Square", 5, 5);
+// const rectangle = new Shape("Rectangle", 5, 5);
+// square.move(7, 8);
+// rectangle.move(7, 8);
+// console.log(square,rectangle);
 
-    // Data Types
+const students = [];
 
-        // 1. String
-let firstName = 'Ishaq'; 
-// examples = "Farrukh", "An Apple", "#", "8" "email@test.com"
-// Any letter, word or sentence is String in JavaScript
+class Student {
+  static data = "Hello World";
+  constructor (fullName, rollNo, batch, subject) {
+    this.fullName = fullName;
+    this._rollNo = rollNo;
+    this.batch = batch;
+    this.subject = subject;
+    this.attendance = [];
+  }
 
-        // 2. Number
-let myLuckyNumber = 8;
-// example = 4, 37, 0, -34, 4.765
+  get rollNo () {
+    return this._rollNo;
+  }
 
-        // 3. Boolean
-let isTodayMonday = true;
-// examaple = true & false
+  markAttendance() {
+    this.attendance.push(new Date());
+  }
+
+  static sayYourName () {
+    console.log("Volunteer");
+  }
+}
+
+class Volunteer extends Student {
+  constructor(fullName, rollNo, batch, subject) {
+    super(fullName, rollNo, batch, subject);
+    this._haveVolunteered = "HTML";
+    this.canVolunteerIn = []
+  }
+
+  addVolunteerSkill (skill) {
+    this.canVolunteerIn.push(skill);
+  }
+
+  get allVolunteerSkills () {
+    return this.canVolunteerIn.join(" ");
+  }
+
+  set haveVolunteered (skill) {
+    if(skill !== "") {
+      this._haveVolunteered = skill;
+    }
+  }
+
+}
+
+const hamza = new Student("Hamza Iqbal", 1234, 1, "JavaScript");
+const shahzad = new Volunteer("Shahzad Iqbal", 1235, 1, "JavaScript");
+hamza.markAttendance();
+shahzad.markAttendance();
+shahzad.addVolunteerSkill("HTML");
+shahzad.addVolunteerSkill("CSS");
+Volunteer.sayYourName();
+
+students.push(hamza);
+students.push(shahzad);
+shahzad.haveVolunteered = "CSS";
+console.log(shahzad._haveVolunteered);

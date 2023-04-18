@@ -79,3 +79,5 @@ arr.forEach(function (val) {
 console.log(finalString);
 
 // Array.map() 
+
+
